@@ -135,14 +135,14 @@ contract ERC20Token is IERC20Token {
         string memory _name,
         string memory _symbol,
         uint256 _decimals,
-        uint256 _totalSupplyAmount
+        uint256 _initialSupply
     )
         public
     {
         name = _name;
         symbol = _symbol;
         decimals = _decimals;
-        _totalSupply = _totalSupplyAmount;
+        _totalSupply = _initialSupply;
         balances[msg.sender] = _totalSupply;
         owner = msg.sender;
     }
